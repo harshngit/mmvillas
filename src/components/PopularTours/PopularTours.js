@@ -24,7 +24,7 @@ const settings = {
       gutter: 30,
     },
     1200: {
-      items: 4,
+      items: 3,
       gutter: 30,
     },
   },
@@ -42,7 +42,7 @@ const PopularTours = () => {
           <Col xl={12}>
             <div className="popular-tours__carousel">
               <TinySlider settings={settings}>
-                {popularTours.map((tour) => (
+                {popularTours?.slice(0, 8)?.map((tour) => (
                   <SingleTour key={tour.id} tour={tour} />
                 ))}
               </TinySlider>

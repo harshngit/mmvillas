@@ -158,9 +158,9 @@ const TourDetailsSidebar = ({ tour }) => {
         </form>
       </div> */}
       <div className="tour-details-two__last-minute">
-        <h3 className="tour-details-two__sidebar-title">Last Minute</h3>
+        <h3 className="tour-details-two__sidebar-title">Trending Villa</h3>
         <ul className="tour-details-two__last-minute-list list-unstyled">
-          {popularTours?.map((item) => (
+          {popularTours?.slice(0, 4).map((item) => (
             <li key={item?.id}>
               <div className="tour-details-two__last-minute-image">
                 {/* <Image

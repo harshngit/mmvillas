@@ -1784,6 +1784,33 @@ ul {
   display: none;
 }
 
+.searchbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 0px 50px;
+}
+
+.searchbox h1 {
+  color: var(--thm-black);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: var(--thm-letter-spacing);
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+
+.searchbox input {
+  width: 20%;
+  border-radius: 40px;
+  padding: 10px 5px;
+  font-size: 15px;
+  color: var(--thm-black);
+}
+
 /*--------------------------------------------------------------
 # Destinations One
 --------------------------------------------------------------*/

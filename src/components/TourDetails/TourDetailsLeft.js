@@ -72,25 +72,31 @@ const TourDetailsLeft = ({ tour }) => {
       <div className="tour-details-two__tour-plan">
         <h3 className="tour-details-two__title">Near By Attraction</h3>
         <div className="accrodion-grp faq-one-accrodion">
-          {tour?.nearbyAttractions.map((over, index) => (
-            <div
-              className="accrodion overflow-hidden"
-              key={index}
-            >
+          {tour?.nearbyAttractions && tour.nearbyAttractions.length > 0 ? (
+            tour.nearbyAttractions.map((over, index) => (
+              <div className="accrodion overflow-hidden" key={index}>
+                <div className="accrodion-title">
+                  <h4>
+                    <span>{over}</span>
+                  </h4>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="accrodion overflow-hidden">
               <div className="accrodion-title">
                 <h4>
-                  <span>{over}</span>
+                  <span>No nearby attractions</span>
                 </h4>
               </div>
-
             </div>
-          ))}
+          )}
         </div>
       </div>
       <div className="tour-details-two__tour-plan mt-5">
         <p onClick={handleOpen} className="terms">T&C</p>
         <div className="accrodion-grp faq-one-accrodion">
-          <Modal isOpen={open} onClose={handleClose}>
+          <Modal isOpen={open} onClose={handleClose} className="over">
             <>
               {tour?.importantNotes.map((over, index) => (
                 <div
